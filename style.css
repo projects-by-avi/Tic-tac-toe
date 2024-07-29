@@ -1,0 +1,136 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #222831, #393E46);
+    color: #EEEEEE;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    color: #EEEEEE;
+}
+
+.mode-buttons {
+    margin-bottom: 20px;
+}
+
+.mode-buttons button,
+#restart-game {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background: #00ADB5;
+    color: #222831;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+.mode-buttons button:hover,
+#restart-game:hover {
+    background: #EEEEEE;
+    color: #00ADB5;
+    transform: translateY(-3px);
+}
+
+#current-mode {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    color: #EEEEEE;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #EEEEEE;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.cell:hover {
+    background-color: #00ADB5;
+    color: #222831;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
+}
+
+.cell.x {
+    color: #ffffff;
+}
+
+.cell.o {
+    color: #19cfdf;
+}
+
+#status {
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    color: #EEEEEE;
+}
+
+
+.cell.win {
+    background-color: #00FF00 !important;
+    color: #000000 !important;
+    transform: scale(1.1);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#select-mode {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background: #00ADB5;
+    color: #222831;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+    align-self: center; 
+}
+
+#select-mode:hover {
+    background: #EEEEEE;
+    color: #00ADB5;
+    transform: translateY(-3px);
+}
